@@ -1,0 +1,56 @@
+{% extends "base_generic.html" %}
+{% block style %}
+    .product-title,  .product-description, .price, .vote, .sizes {
+    margin-bottom: 15px; }
+{% endblock %}
+{% block content %}
+    <div class="container bg ">
+
+        <div class="container-fliud" style="margin-top: 70px; margin-left: 200px;">
+            <div class="wrapper row">
+                <div class="preview col-6">
+
+                    <div class="preview-pic tab-content ">
+                        <div class="tab-pane active  my-auto mx-auto" id="pic-1"><img style="margin-top: 70px;"
+                                                                                      src="{{ book.pic.url }}"
+                                                                                      height="500" width="400"/>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="details col-6 " style=" margin-top:70px; padding: 50px; background-color: #c5e3ff;">
+                    <h1>Title: {{ book.title }}</h1>
+
+                    <p><strong>Author:</strong>{{ book.author }}</p>
+                    <p><strong>Summary:</strong> {{ book.summary }}</p>
+                    <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+                    <p><strong>Language:</strong> {{ book.language }}</p>
+                    <p><strong>Genre:</strong>
+                        {% for genre in book.genre.all %}{{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}
+                    </p>
+                    <p><strong>Published Year:</strong> {{ book.published }}</p>
+                    <div style="margin-left:20px;margin-top:20px">
+                        <h4>Copies</h4>
+                        {% if user.is_superuser %}
+                            <a class="btn btn-danger" href="{% url 'book_delete' pk=book.id %}">DELETE</a>
+                            <a class="btn btn-success" href="{% url 'book_update' pk=book.id %}">Update</a>
+
+                        {% endif %}
+                        {% if book.available_copies %}
+                            <br>
+                            no of available copies={{ book.available_copies }}<br>
+                            <a class="btn btn-primary"
+                               style="background-color: #33ccff; border: none; margin-top: 15px;"
+                               href="{% url 'request_issue' pk=book.id %}">Borrow</a>
+                            <a class="btn btn-primary"
+                               style="background-color: #33ccff; border: none; margin-top: 15px;"
+                               href="{% url 'request_unissue' pk=book.id %}">Return</a>
+                            <a class="btn btn-primary"
+                               style="background-color: #33ccff; border: none; margin-top: 15px;"
+                               href="{% url 'extend_borrow' pk=book.id %}">Extend 15 Days</a>
+                        {% endif %}      </div>
+
+                </div>
+
+{% endblock %}

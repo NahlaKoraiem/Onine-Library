@@ -1,0 +1,9 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <div class="bg" style="margin: 400px; color: #363535; font-size: x-large;">
+        <p>Logged out!</p>
+
+        <a href="{% url 'login' %}">Click here to login again.</a>
+    </div>
+{% endblock %}

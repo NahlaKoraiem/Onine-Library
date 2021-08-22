@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+    <style>
+        body {
+            background: url("{% static '1733.jpg' %}") no-repeat fixed;
+            background-size: 100% 100%;
+
+        }
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
+    </style>
+
+    <center>
+         <div class="container">
+             <h1> Welcome to FCAI library system</h1>
+         </div>
+
+    </center>
+{% endblock %}

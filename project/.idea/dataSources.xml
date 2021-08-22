@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="db" uuid="4fb391a0-b7cb-4dc6-9b73-248857b503c6">
+      <driver-ref>5dd2ff48-a7a2-4182-aed6-8ee4b082bf64</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\jude\Desktop\Django-Library-Management-System-master\db.sqlite3</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.31.1/sqlite-jdbc-3.31.1.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="12069499-11f8-47df-bc1a-fdce95c09836">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/Library_management/settings.py</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\EGYPT_LAPTOP\Downloads\Compressed\Library Management System Project In Django Source Code\db.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="db [2]" uuid="12fe0aa1-6bf6-4bf7-b342-416ff8fccac8">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\College\Web design\Library Management System Project In Django Source Code\Library Management System Project In Django Source Code\db.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>

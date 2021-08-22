@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+    <div class=" bg"
+         style="font-weight: bold; margin-left: 600px; margin-top: 230px; color: #363535; font-size: x-large;">
+        {% for b in Borrower %}
+            {% if b.Expire_date == datetime.now %}
+                <h1> Book borrowing date is expired</h1>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class=" bg"
+         style="font-weight: bold; margin-left: 350px; margin-top: 470px; color: #363535; font-size: x-large;">
+        <h1></h1>
+        {{ message }}
+    </div>
+{% endblock %}

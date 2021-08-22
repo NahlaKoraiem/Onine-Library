@@ -1,0 +1,26 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+
+    <center>
+        <form class="form" id="searchform" action="{% url 'search_s' %}" method="get">
+            <div class="form-group">
+                <input type="text" class="col-5  form-control-lg" placeholder="enter student Roll_no or name or email"
+                       name="q" type="text"/>
+                <button type="button" class="btn btn-success form-control-lg" style="height: 45px;"
+                        onclick="searchform.submit()">Search
+                </button>
+            </div>
+        </form>
+    </center>
+    <style>
+
+    </style>
+    <div class="bg">
+        {% for s in students %}
+            <ul>
+                <li style="font-weight: bold; margin-left: 60px; color: #363535;margin-top: 60px; "><a
+                        href="{% url 'student_detail' pk=s.id %}">{{ s.name }}</a></li>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}
